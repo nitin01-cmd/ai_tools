@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { usePreloadLinks } from "@/hooks/useImagePreload";
 import fisLogo from "@/assets/fis-logo.png";
 import standardRobot from "@/assets/STANDARD_ROBOT-removebg-preview.png";
 import {
@@ -56,6 +57,9 @@ const ToolCard = ({ tool }: { tool: any }) => {
 
 const Hope = () => {
   const navigate = useNavigate();
+  
+  // Preload critical images for better performance
+  usePreloadLinks([fisLogo, standardRobot]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -64,7 +68,15 @@ const Hope = () => {
         <div className="hope-navbar-container">
           {/* Image Logo */}
           <button onClick={() => navigate("/")} className="hope-navbar-logo">
-            <img src={fisLogo} alt="Future India School" className="hope-navbar-logo-image" />
+            <img 
+              src={fisLogo} 
+              alt="Future India School" 
+              className="hope-navbar-logo-image"
+              loading="eager"
+              decoding="async"
+              width={50}
+              height={50}
+            />
           </button>
 
           {/* Centered Navigation Links */}
@@ -103,6 +115,10 @@ const Hope = () => {
                 src={standardRobot}
                 alt="HOPE AI Robot Assistant"
                 className="hero-robot-image"
+                loading="eager"
+                decoding="async"
+                width={450}
+                height={450}
               />
             </div>
           </div>

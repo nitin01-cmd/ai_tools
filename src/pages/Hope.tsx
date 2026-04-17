@@ -83,9 +83,6 @@ const Hope = () => {
           <nav className="hope-navbar-nav">
             <a href="#home" className="hope-navbar-link">Home</a>
           </nav>
-
-          {/* CTA Button */}
-          <button className="hope-navbar-button">Get Started</button>
         </div>
       </nav>
 
@@ -107,7 +104,6 @@ const Hope = () => {
               </p>
               <div className="hope-cta-group">
                 <Button className="hope-button-primary">Chat with HOPE</Button>
-                <Button variant="outline" className="hope-button-secondary">Get Started</Button>
               </div>
             </div>
             <div className="hope-hero-visual">

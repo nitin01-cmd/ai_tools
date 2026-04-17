@@ -133,7 +133,7 @@
 
 /* "Think Beyond Books" - Primary headline */
 .hope-headline-line1 {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: 1.25rem;
   font-weight: 900;
   line-height: 1.1;
@@ -236,7 +236,7 @@
 
 /* "HOPE" - Vibrant red with 3D depth */
 .hope-hero-highlight {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Playfair Display", serif;
   font-weight: 900;
   color: #FF0000;
   position: relative;

@@ -1,0 +1,716 @@
+/* ===== Premium Hope Page Hero Section ===== */
+
+/* Hero Section Container */
+.hope-hero-section {
+  width: 100%;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+  min-height: auto;
+  padding: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .hope-hero-section {
+    padding: 2rem 0;
+  }
+}
+
+/* Soft red glow from top right */
+.hope-hero-glow {
+  position: absolute;
+  top: -150px;
+  right: -200px;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 0, 0, 0.12) 0%,
+    rgba(255, 0, 0, 0.05) 35%,
+    transparent 80%
+  );
+  border-radius: 50%;
+  filter: blur(50px);
+  pointer-events: none;
+  animation: glowFloat 8s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes glowFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-25px); }
+}
+
+/* Main container */
+.hope-hero-container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
+  animation: fadeInUp 1s ease-out;
+}
+
+@media (min-width: 1024px) {
+  .hope-hero-container {
+    padding: 0;
+  }
+}
+
+/* Two-column content layout */
+.hope-hero-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .hope-hero-content {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hope-hero-content {
+    grid-template-columns: 1.1fr 1fr;
+    gap: 2.5rem;
+    padding: 0 3rem;
+  }
+}
+
+/* Left column - Text content */
+.hope-hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  animation: slideInLeft 0.8s ease-out;
+}
+
+@media (min-width: 1024px) {
+  .hope-hero-text {
+    text-align: left;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===== Typography ===== */
+
+.hope-hero-headline {
+  margin: 0 0 1.5rem 0;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+/* "Think Beyond Books" - Primary headline */
+.hope-headline-line1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #1a1a1a;
+  letter-spacing: -1px;
+  margin-bottom: 0.5rem;
+  white-space: normal;
+}
+
+@media (min-width: 480px) {
+  .hope-headline-line1 {
+    font-size: 1.65rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .hope-headline-line1 {
+    font-size: 2.25rem;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 768px) {
+  .hope-headline-line1 {
+    font-size: 2.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hope-headline-line1 {
+    font-size: 3.25rem;
+  }
+}
+
+/* Second line with "Learn with" + "HOPE" */
+.hope-headline-line2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  white-space: normal;
+}
+
+@media (min-width: 480px) {
+  .hope-headline-line2 {
+    font-size: 1.65rem;
+    gap: 0.65rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .hope-headline-line2 {
+    font-size: 2.25rem;
+    gap: 0.75rem;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 768px) {
+  .hope-headline-line2 {
+    font-size: 2.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hope-headline-line2 {
+    font-size: 3.5rem;
+    justify-content: flex-start;
+  }
+}
+
+/* "Learn with" - Elegant serif italic */
+.hope-learn-with {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 400;
+  color: #555555;
+  letter-spacing: 1px;
+  animation: fadeInUp 1.3s ease-out;
+}
+
+/* "HOPE" - Vibrant red with 3D depth */
+.hope-hero-highlight {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 900;
+  color: #FF0000;
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  
+  /* 3D depth effect with layered text-shadow */
+  text-shadow: 
+    2px 2px 0px rgba(200, 0, 0, 0.4),
+    4px 4px 0px rgba(150, 0, 0, 0.25),
+    6px 6px 12px rgba(0, 0, 0, 0.15);
+  
+  transition: all 0.3s ease;
+}
+
+.hope-hero-highlight:hover {
+  transform: translateY(-3px);
+  text-shadow: 
+    2px 2px 0px rgba(200, 0, 0, 0.4),
+    4px 4px 0px rgba(150, 0, 0, 0.25),
+    6px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Subtle background glow behind HOPE */
+.hope-hero-highlight::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -25px;
+  right: -25px;
+  bottom: -20px;
+  background: transparent;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* Description paragraph */
+.hope-hero-subtext {
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #555555;
+  max-width: 600px;
+  margin: 1.25rem 0 1.5rem 0;
+  letter-spacing: 0.3px;
+  animation: fadeInUp 1.4s ease-out;
+}
+
+@media (min-width: 640px) {
+  .hope-hero-subtext {
+    font-size: 1rem;
+    line-height: 1.9;
+    margin: 1.5rem 0 2rem 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .hope-hero-subtext {
+    font-size: 1.125rem;
+    line-height: 2;
+    margin: 2rem 0 2.5rem 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hope-hero-subtext {
+    font-size: 1.25rem;
+    max-width: 550px;
+  }
+}
+
+/* ===== Call-to-Action Buttons ===== */
+
+.hope-cta-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+@media (min-width: 640px) {
+  .hope-cta-group {
+    flex-direction: row;
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hope-cta-group {
+    gap: 1.5rem;
+  }
+}
+
+/* Primary button - "Chat with HOPE" */
+.hope-button-primary {
+  background: linear-gradient(135deg, #FF0000 0%, #CC0000 100%) !important;
+  color: white !important;
+  font-family: "Space Grotesk", sans-serif !important;
+  font-size: 0.95rem;
+  font-weight: 800;
+  padding: 0.8rem 1.8rem !important;
+  border-radius: 50px !important;
+  border: none !important;
+  cursor: pointer;
+  box-shadow: 
+    0 12px 40px rgba(255, 0, 0, 0.4),
+    0 4px 16px rgba(255, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  letter-spacing: 0.5px;
+  text-transform: none;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .hope-button-primary {
+    font-size: 1rem;
+    padding: 0.85rem 2.25rem !important;
+    font-weight: 800;
+  }
+}
+
+.hope-button-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, transparent 50%, rgba(0, 0, 0, 0.15) 100%);
+  pointer-events: none;
+}
+
+.hope-button-primary::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.hope-button-primary:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 
+    0 18px 50px rgba(255, 0, 0, 0.5),
+    0 8px 24px rgba(255, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
+  background: linear-gradient(135deg, #FF1111 0%, #DD0000 100%) !important;
+}
+
+.hope-button-primary:hover::after {
+  width: 300px;
+  height: 300px;
+  transition: none;
+}
+
+.hope-button-primary:active {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 
+    0 8px 20px rgba(255, 0, 0, 0.35),
+    0 2px 8px rgba(255, 0, 0, 0.2) !important;
+}
+
+/* Secondary button - "Get Started" */
+.hope-button-secondary {
+  background: transparent !important;
+  color: #1a1a1a !important;
+  font-family: "Space Grotesk", sans-serif !important;
+  font-size: 0.95rem;
+  font-weight: 800;
+  padding: 0.8rem 1.8rem !important;
+  border: 2.5px solid #1a1a1a !important;
+  border-radius: 50px !important;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  letter-spacing: 0.5px;
+  text-transform: none;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .hope-button-secondary {
+    font-size: 1rem;
+    padding: 0.85rem 2.25rem !important;
+    border-width: 2.5px;
+  }
+}
+
+.hope-button-secondary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 0, 0, 0.1), transparent);
+  transition: left 0.35s ease;
+}
+
+.hope-button-secondary:hover {
+  background: linear-gradient(135deg, rgba(255, 0, 0, 0.08) 0%, rgba(255, 0, 0, 0.04) 100%) !important;
+  border-color: #FF0000 !important;
+  color: #FF0000 !important;
+  transform: translateY(-4px);
+  box-shadow: 
+    0 10px 30px rgba(255, 0, 0, 0.15),
+    0 4px 12px rgba(255, 0, 0, 0.1) !important;
+}
+
+.hope-button-secondary:hover::before {
+  left: 100%;
+}
+
+.hope-button-secondary:active {
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, rgba(255, 0, 0, 0.12) 0%, rgba(255, 0, 0, 0.06) 100%) !important;
+  box-shadow: 
+    0 4px 12px rgba(255, 0, 0, 0.1) !important;
+}
+
+/* ===== Visual Section - Glassmorphism ===== */
+
+.hope-hero-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 300px;
+  animation: slideInRight 0.8s ease-out;
+}
+
+@media (min-width: 768px) {
+  .hope-hero-visual {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hope-hero-visual {
+    height: 500px;
+  }
+  
+  /* Soft red glow behind robot */
+  .hope-hero-visual::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(
+      circle,
+      rgba(255, 0, 0, 0.12) 0%,
+      rgba(255, 0, 0, 0.06) 35%,
+      transparent 70%
+    );
+    border-radius: 50%;
+    filter: blur(70px);
+    pointer-events: none;
+    z-index: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===== Hero Robot Image ===== */
+
+.hero-robot-image {
+  width: 90%;
+  max-width: 350px;
+  height: auto;
+  object-fit: contain;
+  animation: slideInRight 0.8s ease-out;
+  position: relative;
+  z-index: 2;
+  
+  /* Subtle shadow for depth */
+  filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.15))
+          drop-shadow(0 8px 20px rgba(255, 0, 0, 0.12));
+  
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@media (min-width: 640px) {
+  .hero-robot-image {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-robot-image {
+    width: 100%;
+    max-width: 450px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-robot-image {
+    max-width: 550px;
+  }
+}
+
+/* Floating animation for robot */
+@keyframes robotFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Glass container */
+.glassmorphism-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Network background SVG */
+.network-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+/* Glass icon - Glassmorphism effect */
+.glass-icon {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 28px;
+  
+  box-shadow: 
+    inset 0 0 24px rgba(255, 255, 255, 0.35),
+    0 8px 32px rgba(0, 0, 0, 0.1);
+  
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: float 3s ease-in-out infinite;
+  z-index: 2;
+}
+
+.glass-icon:hover {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 
+    inset 0 0 32px rgba(255, 255, 255, 0.45),
+    0 12px 40px rgba(255, 0, 0, 0.2);
+  transform: scale(1.08);
+}
+
+/* Staggered floating animations */
+.tablet-icon {
+  top: 10%;
+  left: 10%;
+  animation: float 3s ease-in-out infinite 0s;
+}
+
+.books-icon {
+  bottom: 8%;
+  left: 20%;
+  animation: float 3s ease-in-out infinite 0.5s;
+}
+
+.compass-icon {
+  top: 35%;
+  right: 5%;
+  animation: float 3s ease-in-out infinite 1s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(-18px) translateX(6px);
+  }
+  50% {
+    transform: translateY(-28px) translateX(0px);
+  }
+  75% {
+    transform: translateY(-18px) translateX(-6px);
+  }
+}
+
+/* ===== Animations ===== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsive Adjustments ===== */
+
+@media (max-width: 1023px) {
+  .hope-hero-text {
+    text-align: center;
+  }
+  
+  .hope-headline-line2 {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hope-hero-container {
+    padding: 2rem 1.5rem;
+  }
+  
+  .hope-hero-headline {
+    margin-bottom: 0.75rem;
+  }
+  
+  .hope-cta-group {
+    flex-direction: column;
+  }
+  
+  .hope-button-primary,
+  .hope-button-secondary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .hope-hero-container {
+    padding: 1.5rem 1rem;
+  }
+  
+  .hope-hero-headline {
+    margin-bottom: 0.5rem;
+  }
+  
+  .hope-hero-visual {
+    display: none;
+  }
+  
+  .hope-cta-group {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .hope-button-primary,
+  .hope-button-secondary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hope-hero-container {
+    padding: 1rem 0.75rem;
+  }
+  
+  .hope-hero-content {
+    padding: 0 0.75rem;
+    gap: 1rem;
+  }
+}

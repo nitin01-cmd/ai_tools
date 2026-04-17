@@ -1,0 +1,363 @@
+/* ===== Learn & Master Concepts Section ===== */
+
+.learn-section {
+  width: 100%;
+  background: #fafafa;
+  position: relative;
+  overflow: hidden;
+  padding: 80px 20px;
+}
+
+@media (min-width: 768px) {
+  .learn-section {
+    padding: 100px 40px;
+  }
+}
+
+/* Subtle background glow */
+.learn-section::before {
+  content: "";
+  position: absolute;
+  top: -200px;
+  right: -300px;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 0, 0, 0.08) 0%,
+    rgba(255, 0, 0, 0.03) 40%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.learn-section-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1.2;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+  margin: 0 0 16px 0;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-title {
+    font-size: 40px;
+  }
+}
+
+/* Accent line under title */
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #FF0000, #FF5555);
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  max-width: 650px;
+  margin: 35px auto 0;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .section-subtitle {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+}
+
+/* Tool Cards Grid */
+.tool-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+@media (min-width: 640px) {
+  .tool-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .tool-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .tool-cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tool Card */
+.tool-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px 24px;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tool-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #FF0000, #FF5555);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(255, 0, 0, 0.12);
+  border-color: #ffe0e0;
+}
+
+.tool-card:hover::before {
+  opacity: 1;
+}
+
+/* Icon Container */
+.tool-icon-container {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background: #ffeaea;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.tool-card:hover .tool-icon-container {
+  transform: scale(1.08);
+  background: #ffd4d4;
+}
+
+.tool-icon {
+  color: #FF0000;
+  font-size: 28px;
+  width: 28px;
+  height: 28px;
+}
+
+/* Card Title */
+.tool-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 12px 0;
+  line-height: 1.4;
+}
+
+/* Card Description */
+.tool-card-desc {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* Subtle card variations */
+.tool-card:nth-child(1) .tool-icon-container {
+  background: #ffeaea;
+}
+
+.tool-card:nth-child(2) .tool-icon-container {
+  background: #fff0e0;
+}
+
+.tool-card:nth-child(3) .tool-icon-container {
+  background: #fff5e0;
+}
+
+.tool-card:nth-child(4) .tool-icon-container {
+  background: #ffeaea;
+}
+
+.tool-card:nth-child(5) .tool-icon-container {
+  background: #fff0e0;
+}
+
+.tool-card:nth-child(6) .tool-icon-container {
+  background: #fff5e0;
+}
+
+.tool-card:nth-child(7) .tool-icon-container {
+  background: #ffeaea;
+}
+
+.tool-card:nth-child(8) .tool-icon-container {
+  background: #fff0e0;
+}
+
+/* ===== Create & Express Ideas Section ===== */
+
+.create-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 80px 20px;
+}
+
+@media (min-width: 768px) {
+  .create-section {
+    padding: 100px 40px;
+  }
+}
+
+.create-section-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ===== Communicate & Perform Better Section ===== */
+
+.communicate-section {
+  width: 100%;
+  background: #fafafa;
+  padding: 80px 20px;
+}
+
+@media (min-width: 768px) {
+  .communicate-section {
+    padding: 100px 40px;
+  }
+}
+
+.communicate-section-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ===== Reminders Section ===== */
+
+.reminders-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 80px 20px;
+}
+
+@media (min-width: 768px) {
+  .reminders-section {
+    padding: 100px 40px;
+  }
+}
+
+.reminders-section-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.reminders-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+@media (min-width: 640px) {
+  .reminders-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .reminders-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+}
+
+.reminder-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.reminder-card:hover {
+  background: #fff5f5;
+  border-color: #ffe0e0;
+  box-shadow: 0 8px 24px rgba(255, 0, 0, 0.08);
+}
+
+.reminder-icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FF0000;
+  font-size: 20px;
+}
+
+.reminder-text {
+  font-size: 15px;
+  color: #333;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+}

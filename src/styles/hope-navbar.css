@@ -1,0 +1,283 @@
+/* ===== Premium Hope Page Navigation Bar ===== */
+
+.hope-navbar {
+  position: relative;
+  width: 100%;
+  background: transparent;
+  overflow: visible;
+  z-index: 50;
+}
+
+/* Soft red glow from far right */
+.hope-navbar::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 0, 0, 0.1) 0%,
+    rgba(255, 0, 0, 0.04) 30%,
+    transparent 75%
+  );
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Main container - Pill/Capsule shaped navbar */
+.hope-navbar-container {
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  margin: 1rem auto;
+  max-width: 1000px;
+  width: 100%;
+  padding: 0.5rem 2rem;
+  min-height: 70px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  
+  /* Sophisticated drop shadow */
+  box-shadow: 
+    0 4px 16px rgba(0, 0, 0, 0.08);
+  
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  
+  animation: fadeInDown 0.8s ease-out;
+  font-family: "Poppins", "Space Grotesk", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Logo Styling ===== */
+
+.hope-navbar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  cursor: pointer;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  margin-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .hope-navbar-logo {
+    margin-right: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hope-navbar-logo {
+    margin-right: 2rem;
+  }
+}
+
+.hope-navbar-logo:hover {
+  transform: scale(1.02);
+}
+
+.hope-navbar-logo-image {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+@media (min-width: 640px) {
+  .hope-navbar-logo-image {
+    height: 58px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hope-navbar-logo-image {
+    height: 64px;
+  }
+}
+
+.hope-navbar-logo-text {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.3px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+@media (min-width: 640px) {
+  .hope-navbar-logo-text {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hope-navbar-logo-text {
+    font-size: 0.95rem;
+  }
+}
+
+.hope-navbar-logo-future {
+  color: #1a1a1a;
+  font-weight: 900;
+}
+
+.hope-navbar-logo-india {
+  color: #FF0000;
+  font-weight: 900;
+}
+
+.hope-navbar-logo-school {
+  color: #1a1a1a;
+  font-weight: 900;
+}
+
+/* ===== Navigation Links ===== */
+
+.hope-navbar-nav {
+  display: none;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .hope-navbar-nav {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hope-navbar-nav {
+    display: flex;
+    gap: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hope-navbar-nav {
+    gap: 4rem;
+  }
+}
+
+.hope-navbar-link {
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: -0.3px;
+  transition: color 0.3s ease;
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 0.5rem 0;
+  display: inline-block;
+}
+
+.hope-navbar-link:hover {
+  color: #ff0000;
+  font-weight: 800;
+}
+
+/* ===== CTA Button ===== */
+
+.hope-navbar-cta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+/* Premium "Get Started" Button */
+.hope-navbar-button {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 0.65rem 1.5rem;
+  font-weight: 800;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.2);
+  white-space: nowrap;
+  font-family: inherit;
+  letter-spacing: -0.3px;
+}
+
+@media (min-width: 640px) {
+  .hope-navbar-button {
+    padding: 0.7rem 1.65rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hope-navbar-button {
+    padding: 0.75rem 1.75rem;
+    font-size: 1rem;
+  }
+}
+
+.hope-navbar-button:hover {
+  background-color: #cc0000;
+  box-shadow: 0 6px 16px rgba(255, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.hope-navbar-button:active {
+  transform: translateY(0);
+}
+
+/* ===== Responsive Design ===== */
+
+@media (max-width: 640px) {
+  .hope-navbar {
+    padding: 0.75rem;
+  }
+
+  .hope-navbar-container {
+    margin: 0;
+    padding: 0.5rem 1rem;
+    min-height: 60px;
+    gap: 0.75rem;
+    border-radius: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hope-navbar-container {
+    padding: 0.5rem 0.75rem;
+    min-height: 55px;
+    gap: 0.5rem;
+  }
+}

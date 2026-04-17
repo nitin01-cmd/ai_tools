@@ -234,43 +234,13 @@
   animation: fadeInUp 1.3s ease-out;
 }
 
-/* "HOPE" - Vibrant red with 3D depth */
+/* "HOPE" - Vibrant red */
 .hope-hero-highlight {
   font-family: "Playfair Display", serif;
   font-weight: 900;
   color: #FF0000;
-  position: relative;
   display: inline-block;
   white-space: nowrap;
-  
-  /* 3D depth effect with layered text-shadow */
-  text-shadow: 
-    2px 2px 0px rgba(200, 0, 0, 0.4),
-    4px 4px 0px rgba(150, 0, 0, 0.25),
-    6px 6px 12px rgba(0, 0, 0, 0.15);
-  
-  transition: all 0.3s ease;
-}
-
-.hope-hero-highlight:hover {
-  transform: translateY(-3px);
-  text-shadow: 
-    2px 2px 0px rgba(200, 0, 0, 0.4),
-    4px 4px 0px rgba(150, 0, 0, 0.25),
-    6px 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Subtle background glow behind HOPE */
-.hope-hero-highlight::before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  left: -25px;
-  right: -25px;
-  bottom: -20px;
-  background: transparent;
-  border-radius: 50%;
-  z-index: -1;
 }
 
 /* Description paragraph */
